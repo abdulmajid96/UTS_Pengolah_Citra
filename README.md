@@ -1,5 +1,5 @@
-# UTS_Pengolah_Citra
- UTS Pengolah CItra: Membuat Program GUI 
+# UTS Membuat Program GUI
+# Mata Kuliah Pengolah Citra
 
 ## Nama  : Abdul Majid
 ## NIM   : 311810693
