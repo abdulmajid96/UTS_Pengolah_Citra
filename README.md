@@ -6,4 +6,4 @@
 ## Kelas : TI.19.C.1
 ## Universitas Pelita Bangsa
 
-Link youtube : 
+Link youtube : https://youtu.be/TOx2FuIlXk0
