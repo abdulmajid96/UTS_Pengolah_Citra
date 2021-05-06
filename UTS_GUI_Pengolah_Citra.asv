@@ -131,9 +131,6 @@ Img = handles.Img;
 axes(handles.axes2)
 imshow(Img)
 title('Citra RGB')
-ax = gca;
-ax.FontSize = 8;
-
 R = Img(:,:,1);
 G = Img(:,:,2);
 B = Img(:,:,3);
@@ -155,6 +152,7 @@ h.FaceColor = [0 0 1];
 xlim([0 255])
 hold off
 title('Histogram')
+
 ax = gca;
 ax.FontSize = 8;
 
@@ -187,9 +185,6 @@ axes(handles.axes2)
 cla('reset')
 imshow(Red_Channel)
 title('Citra Layer Red')
-ax = gca;
-ax.FontSize = 8;
-
 % Menampilkan Histogram layer Red
 axes(handles.axes3)
 cla('reset')
@@ -198,6 +193,7 @@ h.FaceColor = [1 0 0];
 xlim([0 255])
 grid on
 title('Histogram')
+
 ax = gca;
 ax.FontSize = 8;
 
@@ -230,9 +226,6 @@ axes(handles.axes2)
 cla('reset')
 imshow(Green_Channel)
 title('Citra Layer Green')
-ax = gca;
-ax.FontSize = 8;
-
 % Menampilkan Histogram layer Green
 axes(handles.axes3)
 cla('reset')
@@ -241,6 +234,7 @@ h.FaceColor = [0 1 0];
 xlim([0 255])
 grid on
 title('Histogram')
+
 ax = gca;
 ax.FontSize = 8;
 
@@ -273,9 +267,6 @@ axes(handles.axes2)
 cla('reset')
 imshow(Blue_Channel)
 title('Citra Layer Blue')
-ax = gca;
-ax.FontSize = 8;
-
 % Menampilkan Histogram layer Blue
 axes(handles.axes3)
 cla('reset')
@@ -284,6 +275,7 @@ h.FaceColor = [0 0 1];
 xlim([0 255])
 grid on
 title('Histogram')
+
 ax = gca;
 ax.FontSize = 8;
 
@@ -313,8 +305,6 @@ axes(handles.axes2)
 cla('reset')
 imshow(Gray)
 title('Citra Grayscale')
-ax = gca;
-ax.FontSize = 8;
 
 % Menampilkan Histogram Citra Grayscale
 axes(handles.axes3)
@@ -324,11 +314,12 @@ h.FaceColor = [0.5 0.5 0.5];
 xlim([0 255])
 grid on
 title('Histogram')
-ax = gca;
-ax.FontSize = 8;
-
+ 
 handles.Gray = Gray;
 guidata(hObject,handles)
+
+ax = gca;
+ax.FontSize = 8;
 
 % --- Executes on button press in radiobutton10.
 function radiobutton10_Callback(hObject, eventdata, handles)
@@ -357,8 +348,6 @@ axes(handles.axes2)
 cla('reset')
 imshow(Gray)
 title('Citra Grayscale')
-ax = gca;
-ax.FontSize = 8;
 
 % Untuk merubah Graysacle menjadi BIner 
 thresh = graythresh(Gray);
@@ -368,6 +357,7 @@ axes(handles.axes3)
 cla('reset')
 imshow(bw)
 title('Citra Biner')
+
 ax = gca;
 ax.FontSize = 8;
 
@@ -397,22 +387,19 @@ axes(handles.axes1)
 cla('reset')
 imshow(Gray)
 title('Sebelum Perataan Kontras')
-ax = gca;
-ax.FontSize = 8;
-
+ 
 axes(handles.axes2)
 cla('reset')
 imshow(I_adjust)
 title('Hasil Perataan Kontras')
-ax = gca;
-ax.FontSize = 8;
-
+ 
 axes(handles.axes3)
 h = histogram(I_adjust(:));
 h.FaceColor = [0.5 0.5 0.5];
 xlim([0 255])
 grid on
 title('Histogram Hasil Perataan')
+
 ax = gca;
 ax.FontSize = 8;
 
@@ -442,9 +429,7 @@ axes(handles.axes1)
 cla('reset')
 imshow(Gray)
 title('Sebelum Penambahan Kontras')
-ax = gca;
-ax.FontSize = 8;
-
+ 
 axes(handles.axes2)
 cla('reset')
 imshow(I_adjust)
